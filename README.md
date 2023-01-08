@@ -97,6 +97,15 @@ title('spectre de puissance du signal bruité :');
 
 7. Augmenter l’intensité de bruit puis afficher le spectre. Interpréter le résultat obtenu.
 
+```matlab
+bruit = 60*randn(size(x));
+noise = x+bruit;
+y = fft(noise);
+plot(fshift,fftshift(abs(y)));
+title('nv spectre apres avoir augmenter l intensite du bruit')
+```
+<img width="407" alt="112" src="https://user-images.githubusercontent.com/121026580/211220784-d6b95cd2-cc35-42d4-8c71-0632cee17a5f.png">
+
 ## Analyse fréquentielle du chant du rorqual bleu
 1. Chargez, depuis le fichier ‘bluewhale.au’, le sous-ensemble de données qui 
 correspond au chant du rorqual bleu du Pacifique. En effet, les appels de rorqual bleu 
@@ -139,3 +148,7 @@ title('D Spectrale de la puissance du signal')
 
 4. Déterminer à partir du tracé, la fréquence fondamentale du gémissement de rorqual 
 bleu.
+
+<img width="397" alt="hhhhhhh" src="https://user-images.githubusercontent.com/121026580/211221161-809abbfd-a984-4adb-b309-75ee00c81e29.png">
+
+>F ~= 17 hz
